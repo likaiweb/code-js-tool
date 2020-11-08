@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+</head>
+<style>
+	.box{
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 50px;
+		margin:auto;
+		height: 50px;
+		background: #fff;
+		border-radius: 50%;
+		box-shadow: 0 0 20px 2px #73a9fb;
+	}
+	.center{
+		width: 44px;
+		height: 44px;
+		background: #3385ff;
+		border-radius: 50%;
+		box-shadow: 0 0 5px 2px #fff;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 2;
+	}
+	.san{
+		width: 0;
+		height: 0;
+		position: absolute;
+		z-index: 1;
+		left: 25px;
+		top: 5px;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left: 50px solid #3385ff;
+		border-right: 0;
+		transform-origin: left center;
+	}
+</style>
+<body>
+	<div class="box">
+		<div class="center"></div>
+		<div class="san"></div>
+	</div>
+</body>
+</html>
+<script>
+	var cl=document.documentElement.clientWidth/2;
+	var ct=document.documentElement.clientHeight/2;
+	document.onmousemove=function(event) {
+		var e = event || window.event;
+		var el=e.clientX;
+		var et=e.clientY;
+		var deg=getAngle(cl,ct,el,et);
+		document.querySelector(".san").style.transform="rotate("+(deg-90)+"deg)";
+	};
+	function getAngle(px,py,mx,my){//获得人物中心和鼠标坐标连线，与y轴正半轴之间的夹角
+        var x = Math.abs(px-mx);
+        var y = Math.abs(py-my);
+        var z = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+        var cos = y/z;
+        var radina = Math.acos(cos);//用反三角函数求弧度
+        var angle = Math.floor(180/(Math.PI/radina));//将弧度转换成角度
+        if(mx>px&&my>py){//鼠标在第四象限
+            angle = 180 - angle;
+        }
+        if(mx==px&&my>py){//鼠标在y轴负方向上
+            angle = 180;
+        }
+        if(mx>px&&my==py){//鼠标在x轴正方向上
+            angle = 90;
+        }
+        if(mx<px&&my>py){//鼠标在第三象限
+            angle = 180+angle;
+        }
+        if(mx<px&&my==py){//鼠标在x轴负方向
+            angle = 270;
+        }
+        if(mx<px&&my<py){//鼠标在第二象限
+            angle = 360 - angle;
+        }
+        return angle;
+    }
+</script>

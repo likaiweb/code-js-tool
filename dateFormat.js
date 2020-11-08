@@ -1,27 +1,4 @@
-<!--
- * @Date: 2019-12-06 20:24:57
- * @Author: 李凯
- * @LastEditors: 李凯
- * @LastEditTime: 2019-12-06 20:31:32
- * @Description: 
- * @FilePath: /javascript/日期处理函数.htm
- -->
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
-<script>
     //---------------------------------------------------
     // 判断闰年
     //---------------------------------------------------
@@ -316,4 +293,3 @@
         clock += mm;
         return (clock);
     }
-</script>

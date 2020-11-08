@@ -1,27 +1,4 @@
-<!--
- * @Date: 2019-12-06 20:29:30
- * @Author: 李凯
- * @LastEditors: 李凯
- * @LastEditTime: 2019-12-06 20:31:52
- * @Description: 
- * @FilePath: /javascript/ajax原生.htm
- -->
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
-<script>
     /**
      * 1.传入对象格式。要求如下：
      * ajax({
@@ -123,4 +100,3 @@
             }
         }
     }
-</script>

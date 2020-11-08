@@ -1,27 +1,4 @@
-<!--
- * @Date: 2019-12-06 20:32:20
- * @Author: 李凯
- * @LastEditors: 李凯
- * @LastEditTime: 2019-12-06 20:33:14
- * @Description:
- * @FilePath: /javascript/文件上传.htm
- -->
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
-<script>
     /*
 *
 * 调用方法
@@ -135,4 +112,3 @@ move_uploaded_file($_FILES["file"]["tmp_name"],$url);
             }
         }
     }
-</script>

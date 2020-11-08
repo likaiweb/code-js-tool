@@ -1,24 +1,4 @@
-<!--
- * @Date: 2019-12-06 20:27:45
- * @Author: 李凯
- * @LastEditors: 李凯
- * @LastEditTime: 2019-12-06 20:29:04
- * @Description: 
- * @FilePath: /javascript/xml转json.htm
- -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<script>
+
 // 字符串转XML
 function loadXml(str) {
 if (str == null) {
@@ -104,4 +84,3 @@ for(var i=0; i<_attrslength; i++){//解析xml节点属性 var attrname=_attrs[i]
     var obj1=xmltojson(xmlobj,'USERS/USER',true);
     console.log(obj);
     console.log(obj1);
-</script>
